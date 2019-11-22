@@ -1,1 +1,48 @@
 // Mixins in here
+// Home page header
+header{
+    .dottedBorder();
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 30vh;
+    padding-bottom: 3vh;
+    .header-main-img{
+        flex-grow: 1;
+        padding-bottom: 5vh;
+    }
+}
+
+// navigation
+.external{
+    width: 100vw;
+    .dottedBorder();
+}
+
+.nav{
+    .flexRowNowrap();
+    justify-content: baseline;
+    max-width: 800px;
+    width: 100%;
+    margin: 5vh auto 0 auto;
+    height: 8vh;
+    .logo{
+        flex-grow: 2;
+        padding: 0 0 5vh 0;
+    }
+
+    .anchors{
+        flex-grow: 1;
+        justify-items: flex-end;
+        line-height: 4em;
+        .flexRowNowrap();
+        a {
+            flex-grow: 1;
+            text-decoration: none;
+            font-size: 1.5em;
+            color: black;
+        }
+    }
+}

@@ -1,3 +1,47 @@
+header {
+  border-bottom: 2px dashed #C0C0C0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 30vh;
+  padding-bottom: 3vh;
+}
+header .header-main-img {
+  flex-grow: 1;
+  padding-bottom: 5vh;
+}
+.external {
+  width: 100vw;
+  border-bottom: 2px dashed #C0C0C0;
+}
+.nav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: baseline;
+  max-width: 800px;
+  width: 100%;
+  margin: 5vh auto 0 auto;
+  height: 8vh;
+}
+.nav .logo {
+  flex-grow: 2;
+  padding: 0 0 5vh 0;
+}
+.nav .anchors {
+  flex-grow: 1;
+  justify-items: flex-end;
+  line-height: 4em;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.nav .anchors a {
+  flex-grow: 1;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: black;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -176,17 +220,25 @@ img {
   color: black;
   font-family: 'Indie Flower', cursive;
 }
+.flexColWrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 .dottedBorder {
+  border-bottom: 2px dashed #C0C0C0;
+}
+.external {
+  width: 100vw;
   border-bottom: 2px dashed #C0C0C0;
 }
 .nav {
   display: flex;
   flex-wrap: nowrap;
-  border-bottom: 2px dashed #C0C0C0;
   justify-content: baseline;
   max-width: 800px;
   width: 100%;
-  margin: 5vh auto;
+  margin: 5vh auto 0 auto;
   height: 8vh;
 }
 .nav .logo {
@@ -196,6 +248,7 @@ img {
 .nav .anchors {
   flex-grow: 1;
   justify-items: flex-end;
+  line-height: 4em;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -204,6 +257,20 @@ img {
   text-decoration: none;
   font-size: 1.5em;
   color: black;
+}
+@media screen and (max-width: 500px) {
+  .nav .nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .nav .nav .logo {
+    flex-direction: stretch;
+  }
+  .nav .nav .anchors {
+    flex-grow: 1;
+  }
 }
 .footer {
   width: 100%;
@@ -261,4 +328,44 @@ img {
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+.flexColWrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header {
+  border-bottom: 2px dashed #C0C0C0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 30vh;
+  padding-bottom: 3vh;
+}
+header .header-main-img {
+  flex-grow: 1;
+  padding-bottom: 5vh;
+}
+button {
+  background: #008080;
+  width: 80%;
+  height: 3em;
+  font-size: 1.7em;
+  color: white;
+  border-radius: 12px;
+}
+@media screen and (max-width: 500px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

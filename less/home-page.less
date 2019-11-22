@@ -6,7 +6,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
     
     .text-content {
       width: 48%;
@@ -58,4 +57,49 @@
       margin-bottom: 30px;
     }
   }
+
+  
 }// home
+
+
+// Kim Buck's works *****************************************
+.flexColWrap{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.flexRow{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header{
+  .dottedBorder();
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 30vh;
+  padding-bottom: 3vh;
+  .header-main-img{
+    flex-grow: 1;
+    padding-bottom: 5vh;
+  }
+}
+
+button{
+  background:#008080;
+  width: 80%;
+  height: 3em;
+  font-size: 1.7em;
+  color: white;
+  border-radius: 12px;
+}
+
+@media screen and @mobile{
+  .nav{
+    .flexRow();
+  }
+}
