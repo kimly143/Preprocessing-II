@@ -258,18 +258,13 @@ img {
   font-size: 1.5em;
   color: black;
 }
-@media screen and (max-width: 500px) {
-  .nav .nav {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
+@media screen and ((max-width: 500px)) {
+  .nav .logo {
+    width: 100%;
+    text-align: center;
   }
-  .nav .nav .logo {
-    flex-direction: stretch;
-  }
-  .nav .nav .anchors {
-    flex-grow: 1;
+  .nav .anchors {
+    width: 100%;
   }
 }
 .footer {
