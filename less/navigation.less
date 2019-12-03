@@ -21,7 +21,8 @@
 }
 .nav{
     .flexRowNowrap();
-    justify-content: baseline;
+    content: "hello";
+    // justify-content: baseline;
     max-width: 800px;
     width: 100%;
     margin: 5vh auto 0 auto;
@@ -44,15 +45,23 @@
         }
     }
 }
-@media screen and (@mobile){
-    .nav {
-        // .flexColWrap();
+
+@media @mobile{
+    .nav{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 0 0 0;
+        .flexRowNowrap();
         .logo{
-            width:100%;
-            text-align: center;;
+            flex-grow: 1;
+            width: 100%;
+            text-align: center;
+            padding: 0 0;
         }
         .anchors{
-            width: 100%;          
+            flex-grow: 1;
+            width: 100%;  
+            text-align: center;;    
         }
     }
 }

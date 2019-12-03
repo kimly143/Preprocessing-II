@@ -235,7 +235,7 @@ img {
 .nav {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: baseline;
+  content: "hello";
   max-width: 800px;
   width: 100%;
   margin: 5vh auto 0 auto;
@@ -258,13 +258,24 @@ img {
   font-size: 1.5em;
   color: black;
 }
-@media screen and ((max-width: 500px)) {
+@media (max-width: 500px) {
+  .nav {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0 0 0;
+    display: flex;
+    flex-wrap: nowrap;
+  }
   .nav .logo {
+    flex-grow: 1;
     width: 100%;
     text-align: center;
+    padding: 0 0;
   }
   .nav .anchors {
+    flex-grow: 1;
     width: 100%;
+    text-align: center;
   }
 }
 .footer {
@@ -328,7 +339,16 @@ img {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
+}
+.flexColNowrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.flexColReverseNowrap {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
 }
 .flexRow {
   display: flex;
@@ -357,10 +377,68 @@ button {
   color: white;
   border-radius: 12px;
 }
-@media screen and (max-width: 500px) {
-  .nav {
+@media (max-width: 500px) {
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+  body .external {
+    width: 100%;
+    border-bottom: 2px dashed #C0C0C0;
+  }
+  header .header-main-img {
+    margin: 0 5vw;
+  }
+  header .header-text {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .container .home {
+    width: 100%;
+  }
+  .home .content-section {
+    width: 100vw;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .home .content-section .text-content,
+  .home .content-section .img-content {
+    width: 94vw;
+    margin: 0 5vw;
+  }
+  .home .inverse-content {
+    width: 100vw;
+    border-bottom: 2px dashed #C0C0C0;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+  }
+  .home .inverse-content .text-content,
+  .home .inverse-content .img-content {
+    width: 94vw;
+    margin: 0 5vw;
+  }
+  .home .content-destination {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .home .content-destination .text-content,
+  .home .content-destination .img-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .home .content-pick {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 80vw;
+    margin: 0 10vw;
+  }
+  .home .content-pick .destination {
+    width: 90%;
+    margin: 1vh auto;
   }
 }

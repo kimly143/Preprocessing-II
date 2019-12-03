@@ -67,7 +67,16 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
+}
+.flexColNowrap{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.flexColReverseNowrap{
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
 }
 .flexRow{
   display: flex;
@@ -97,9 +106,68 @@ button{
   color: white;
   border-radius: 12px;
 }
+//**************************mobile******************
+@media @mobile{
+  body{
+    width: 100%;
+    margin: 0 auto;
+    .external{
+      width: 100%;
+      .dottedBorder();
+    }
+  }
+  header{
+      .header-main-img{
+        margin: 0 5vw;
+          }
+      .header-text{
+        width: 90vw;
+        margin: 0 auto;
+      }
+    }
+  
+.container .home{
+  width: 100%;
+}
 
-@media screen and @mobile{
-  .nav{
-    .flexRow();
+  .home .content-section{
+    width: 100vw;
+    // margin: 0 auto;
+    .flexColNowrap();
+    .text-content, .img-content{
+      width: 94vw;
+      margin: 0 5vw;
+    }
+  }
+
+  .home .inverse-content{
+    width: 100vw;
+    // margin: 0 auto;
+    .dottedBorder();
+    .flexColReverseNowrap();
+    .text-content, .img-content{
+      width: 94vw;
+      margin: 0 5vw;
+    }
+  }
+
+  .home .content-destination{
+    width: 90vw;
+    // margin: 0 5vw;
+    .flexColNowrap();
+    .text-content, .img-content{
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  .home .content-pick{
+    .flexColNowrap();
+    width: 80vw;
+    margin: 0 10vw;
+    .destination{
+      width: 90%;
+      margin: 1vh auto;
+    }
   }
 }
